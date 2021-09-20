@@ -3,7 +3,9 @@ import io from 'socket.io-client'
 import { useState } from 'react'
 import Chat from './Chat'
 
-const socket = io.connect('http://localhost:3001')
+const url = 'https://vishu-messenger-app.herokuapp.com/'
+
+const socket = io.connect(url)
 
 function App() {
 	const [username, setUsername] = useState('')
